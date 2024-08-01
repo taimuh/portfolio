@@ -22,9 +22,12 @@ const PortfolioPage = () => {
           <div className="flex justify-between h-16">
             <div className="flex">
               <div className="flex-shrink-0 flex items-center">
-                <span className="text-2xl font-bold">My Name</span>
+                <span className="text-2xl font-bold text-indigo-600">My Name</span>
               </div>
               <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
+                <a href="#posts" className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                  Posts
+                </a>
                 <a href="#projects" className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
                   Projects
                 </a>
@@ -53,6 +56,9 @@ const PortfolioPage = () => {
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end">
+                  <DropdownMenuItem>
+                    <a href="#posts">Posts</a>
+                  </DropdownMenuItem>
                   <DropdownMenuItem>
                     <a href="#projects">Projects</a>
                   </DropdownMenuItem>
@@ -90,8 +96,31 @@ const PortfolioPage = () => {
         </div>
       </section>
 
+      {/* Posts Section */}
+      <section id="posts" className="bg-gray-50 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-extrabold text-gray-900">Posts</h2>
+          <div className="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
+            {[1, 2, 3].map((item) => (
+              <Card key={item}>
+                <CardHeader>
+                  <CardTitle>Post {item}</CardTitle>
+                  <CardDescription>Short post description</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p>Post details go here...</p>
+                </CardContent>
+                <CardFooter>
+                  <Button>View Post</Button>
+                </CardFooter>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Projects Section */}
-      <section id="projects" className="bg-gray-50 py-16">
+      <section id="projects" className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-extrabold text-gray-900">Projects</h2>
           <div className="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
@@ -114,7 +143,7 @@ const PortfolioPage = () => {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="bg-white py-16">
+      <section id="skills" className="bg-gray-50 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-extrabold text-gray-900">Skills</h2>
           <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -135,7 +164,7 @@ const PortfolioPage = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="bg-gray-50 py-16">
+      <section id="contact" className="bg-white py-16">
          {/* Contact Information */}
          <div className="bg-gray-50 rounded-lg p-8 flex flex-col items-center justify-center">
               <h3 className="text-xl font-semibold mb-6">Contact Information</h3>
@@ -156,7 +185,7 @@ const PortfolioPage = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-white items-center">
+      <footer className="bg-gray-50 items-center">
         <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 md:items-center lg:px-8">
           <div className="mt-8 md:mt-0 md:order-1">
             <p className="text-center text-base text-gray-400">
