@@ -1,7 +1,6 @@
 # portfolio
 
 "timuh"のポートフォリオサイト
-![image](https://github.com/user-attachments/assets/239f14e2-f23d-4e62-bd98-fad3f9bed2ce)
 
 ## 🌐 URL
 
