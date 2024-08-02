@@ -15,9 +15,9 @@ import { ThemeToggle } from '@/components/ui/ThemeToggle';
 
 const PortfolioPage = () => {
   return (
-    <div className="min-h-screen bg-gray-900 dark:bg-stone-100">
+    <div className="min-h-screen bg-stone-100 dark:bg-gray-900">
       {/* Header */}
-      <header className="bg-gray-800 dark:bg-stone-100 shadow-sm">
+      <header className="bg-stone-100 dark:bg-gray-800 shadow-sm">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex">
@@ -79,10 +79,10 @@ const PortfolioPage = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="bg-stone-100 dark:bg-gray-800">
+      <section className="bg-neutral-200 dark:bg-gray-700">
         <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
+            <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-stone-100 sm:text-5xl md:text-6xl">
               <span className="block">Hi, Im My name</span>
               <span className="block text-indigo-600">I build amazing web experiences</span>
             </h1>
@@ -97,9 +97,9 @@ const PortfolioPage = () => {
       </section>
 
       {/* Posts Section */}
-      <section id="posts" className="bg-gray-50 py-16">
+      <section id="posts" className="bg-stone-100 dark:bg-gray-800 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-extrabold text-gray-900">Posts</h2>
+          <h2 className="text-3xl font-extrabold text-gray-900 dark:text-stone-100">Posts</h2>
           <div className="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
             {[1, 2, 3].map((item) => (
               <Card key={item}>
@@ -120,9 +120,9 @@ const PortfolioPage = () => {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="bg-white py-16">
+      <section id="projects" className="bg-neutral-200 dark:bg-gray-700 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-extrabold text-gray-900">Projects</h2>
+          <h2 className="text-3xl font-extrabold text-gray-900 dark:text-stone-100">Projects</h2>
           <div className="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
             {[1, 2, 3].map((item) => (
               <Card key={item}>
@@ -143,30 +143,28 @@ const PortfolioPage = () => {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="bg-gray-50 py-16">
+      <section id="skills" className="bg-stone-100 dark:bg-gray-800 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-extrabold text-gray-900">Skills</h2>
+          <h2 className="text-3xl font-extrabold text-gray-900 dark:text-stone-100">Skills</h2>
           <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {['React', 'Next.js', 'Node.js', 'TypeScript', 'GraphQL', 'Tailwind CSS'].map((skill) => (
-              <div key={skill} className="pt-6">
-                <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8">
-                  <div className="-mt-6">
-                    <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">{skill}</h3>
-                    <p className="mt-5 text-base text-gray-500">
-                      Experienced in building robust applications with {skill}.
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <Card key={skill}>
+                <CardHeader>
+                  <CardTitle>{skill}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>Short project description</CardDescription>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="bg-white py-16">
+      <section id="contact" className="bg-neutral-200 dark:bg-gray-700 py-16">
          {/* Contact Information */}
-         <div className="bg-gray-50 rounded-lg p-8 flex flex-col items-center justify-center">
+        <div className="bg-neutral-200 dark:bg-gray-700 rounded-lg p-8 flex flex-col items-center justify-center">
               <h3 className="text-xl font-semibold mb-6">Contact Information</h3>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
@@ -178,14 +176,11 @@ const PortfolioPage = () => {
                   <span>@YourXHandle</span>
                 </div>
               </div>
-              <div className="mt-8">
-                <p className="text-gray-600">Feel free to reach out via email or X (formerly Twitter). Im always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
-              </div>
             </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-50 items-center">
+      <footer className="bg-stone-100 dark:bg-gray-800 items-center">
         <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 md:items-center lg:px-8">
           <div className="mt-8 md:mt-0 md:order-1">
             <p className="text-center text-base text-gray-400">
