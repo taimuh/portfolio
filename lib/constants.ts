@@ -17,7 +17,7 @@ export const NAVIGATION = {
     { href: "#projects", label: "Projects" },
     { href: "#skills", label: "Skills" },
     { href: "#contact", label: "Contact" },
-    { href: "#source", label: "Source" },
+    { href: "https://github.com/taimuh", label: "Source" },
   ],
 } as const;
 
