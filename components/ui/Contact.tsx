@@ -19,8 +19,8 @@ export function Contact() {
 const STYLES = {
   section: "bg-neutral-200 dark:bg-gray-700 py-16",
   container: "bg-neutral-200 dark:bg-gray-700 rounded-lg p-8 flex flex-col items-center justify-center",
-  title: "text-xl font-semibold mb-6",
+  title: "text-xl font-semibold mb-6 text-gray-900 dark:text-stone-100",
   content: "space-y-4",
-  contactItem: "flex items-center space-x-3",
-  icon: "h-6 w-6 text-slate-900",
+  contactItem: "flex items-center space-x-3 text-gray-700 dark:text-gray-300",
+  icon: "h-6 w-6 text-slate-900 dark:text-slate-100",
 } as const;
