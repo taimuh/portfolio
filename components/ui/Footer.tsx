@@ -1,4 +1,4 @@
-import { PERSONAL_INFO, UI_TEXT } from '@/lib/constants';
+import { PERSONAL_INFO, UI_TEXT } from "@/lib/constants";
 
 export function Footer() {
   return (
@@ -6,7 +6,8 @@ export function Footer() {
       <div className={STYLES.container}>
         <div className={STYLES.content}>
           <p className={STYLES.text}>
-          © {new Date().getFullYear()} {PERSONAL_INFO.name}. {UI_TEXT.footer.allRightsReserved}
+            © {new Date().getFullYear()} {PERSONAL_INFO.name}.{" "}
+            {UI_TEXT.footer.allRightsReserved}
           </p>
         </div>
       </div>

@@ -1,6 +1,6 @@
 # portfolio
 
-"timuh"のポートフォリオサイト
+"Taimoon" 's Homepage
 
 ## 🌐 URL
 

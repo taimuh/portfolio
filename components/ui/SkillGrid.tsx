@@ -1,5 +1,11 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { UI_TEXT } from '@/lib/constants';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { UI_TEXT } from "@/lib/constants";
 
 interface SkillGridProps {
   title: string;
@@ -20,7 +26,9 @@ export function SkillGrid({ title, skills, className, id }: SkillGridProps) {
                 <CardTitle>{skill}</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription>{UI_TEXT.placeholders.shortProjectDescription}</CardDescription>
+                <CardDescription>
+                  {UI_TEXT.placeholders.shortProjectDescription}
+                </CardDescription>
               </CardContent>
             </Card>
           ))}
