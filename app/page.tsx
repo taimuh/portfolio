@@ -1,11 +1,11 @@
-import React from 'react';
-import { Header } from '@/components/ui/Header';
-import { Hero } from '@/components/ui/Hero';
-import { CardGrid } from '@/components/ui/CardGrid';
-import { SkillGrid } from '@/components/ui/SkillGrid';
-import { Contact } from '@/components/ui/Contact';
-import { Footer } from '@/components/ui/Footer';
-import { UI_TEXT, SKILLS } from '@/lib/constants';
+import React from "react";
+import { Header } from "@/components/ui/Header";
+import { Hero } from "@/components/ui/Hero";
+import { CardGrid } from "@/components/ui/CardGrid";
+import { SkillGrid } from "@/components/ui/SkillGrid";
+import { Contact } from "@/components/ui/Contact";
+import { Footer } from "@/components/ui/Footer";
+import { UI_TEXT, SKILLS } from "@/lib/constants";
 
 const PortfolioPage = () => {
   const postsData = [1, 2, 3].map((item) => ({
@@ -13,7 +13,7 @@ const PortfolioPage = () => {
     title: `${UI_TEXT.placeholders.postTitle} ${item}`,
     description: UI_TEXT.placeholders.shortPostDescription,
     content: UI_TEXT.placeholders.postDetails,
-    buttonText: UI_TEXT.buttons.viewPost
+    buttonText: UI_TEXT.buttons.viewPost,
   }));
 
   const projectsData = [1, 2, 3].map((item) => ({
@@ -21,7 +21,7 @@ const PortfolioPage = () => {
     title: `${UI_TEXT.placeholders.projectTitle} ${item}`,
     description: UI_TEXT.placeholders.shortProjectDescription,
     content: UI_TEXT.placeholders.projectDetails,
-    buttonText: UI_TEXT.buttons.viewProject
+    buttonText: UI_TEXT.buttons.viewProject,
   }));
 
   return (
@@ -29,21 +29,21 @@ const PortfolioPage = () => {
       <Header />
       <Hero />
 
-      <CardGrid 
+      <CardGrid
         id="posts"
         title={UI_TEXT.sections.posts}
         items={postsData}
         className={STYLES.postsSection}
       />
 
-      <CardGrid 
+      <CardGrid
         id="projects"
         title={UI_TEXT.sections.projects}
         items={projectsData}
         className={STYLES.projectsSection}
       />
 
-      <SkillGrid 
+      <SkillGrid
         id="skills"
         title={UI_TEXT.sections.skills}
         skills={SKILLS}

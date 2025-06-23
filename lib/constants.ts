@@ -1,7 +1,8 @@
 export const PERSONAL_INFO = {
   name: "Taimoon",
   greeting: "Hi, I'm",
-  title: "Software developer specializing in React/TypeScript, Node.js and Java",
+  title:
+    "Software developer specializing in React/TypeScript, Node.js and Java",
   tagline: "I build amazing web experiences",
   xHandle: "@taimoon_dev",
 } as const;
@@ -50,7 +51,7 @@ export const UI_TEXT = {
 
 export const SKILLS = [
   "React",
-  "Next.js", 
+  "Next.js",
   "Node.js",
   "TypeScript",
   "Java",
