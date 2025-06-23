@@ -25,7 +25,7 @@ const PortfolioPage = () => {
   }));
 
   return (
-    <div className="min-h-screen bg-stone-100 dark:bg-gray-900">
+    <div className={STYLES.container}>
       <Header />
       <Hero />
 
@@ -33,21 +33,21 @@ const PortfolioPage = () => {
         id="posts"
         title={UI_TEXT.sections.posts}
         items={postsData}
-        className="bg-stone-100 dark:bg-gray-800 py-16"
+        className={STYLES.postsSection}
       />
 
       <CardGrid 
         id="projects"
         title={UI_TEXT.sections.projects}
         items={projectsData}
-        className="bg-neutral-200 dark:bg-gray-700 py-16"
+        className={STYLES.projectsSection}
       />
 
       <SkillGrid 
         id="skills"
         title={UI_TEXT.sections.skills}
         skills={SKILLS}
-        className="bg-stone-100 dark:bg-gray-800 py-16"
+        className={STYLES.skillsSection}
       />
 
       <Contact />
@@ -55,5 +55,12 @@ const PortfolioPage = () => {
     </div>
   );
 };
+
+const STYLES = {
+  container: "min-h-screen bg-stone-100 dark:bg-gray-900",
+  postsSection: "bg-stone-100 dark:bg-gray-800 py-16",
+  projectsSection: "bg-neutral-200 dark:bg-gray-700 py-16",
+  skillsSection: "bg-stone-100 dark:bg-gray-800 py-16",
+} as const;
 
 export default PortfolioPage;
