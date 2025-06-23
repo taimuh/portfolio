@@ -27,7 +27,7 @@ export function SkillGrid({ title, skills, className, id }: SkillGridProps) {
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  {UI_TEXT.placeholders.shortProjectDescription}
+                  {UI_TEXT.placeholders.shortWorkDescription}
                 </CardDescription>
               </CardContent>
             </Card>

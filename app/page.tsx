@@ -6,8 +6,9 @@ import { SkillGrid } from "@/components/ui/SkillGrid";
 import { Contact } from "@/components/ui/Contact";
 import { Footer } from "@/components/ui/Footer";
 import { UI_TEXT, SKILLS } from "@/lib/constants";
+import { getAllWorks } from "@/lib/markdown";
 
-const PortfolioPage = () => {
+const PortfolioPage = async () => {
   const postsData = [1, 2, 3].map((item) => ({
     id: item,
     title: `${UI_TEXT.placeholders.postTitle} ${item}`,
@@ -16,13 +17,7 @@ const PortfolioPage = () => {
     buttonText: UI_TEXT.buttons.viewPost,
   }));
 
-  const projectsData = [1, 2, 3].map((item) => ({
-    id: item,
-    title: `${UI_TEXT.placeholders.projectTitle} ${item}`,
-    description: UI_TEXT.placeholders.shortProjectDescription,
-    content: UI_TEXT.placeholders.projectDetails,
-    buttonText: UI_TEXT.buttons.viewProject,
-  }));
+  const worksData = await getAllWorks();
 
   return (
     <div className={STYLES.container}>
@@ -37,10 +32,10 @@ const PortfolioPage = () => {
       />
 
       <CardGrid
-        id="projects"
-        title={UI_TEXT.sections.projects}
-        items={projectsData}
-        className={STYLES.projectsSection}
+        id="works"
+        title={UI_TEXT.sections.works}
+        items={worksData}
+        className={STYLES.worksSection}
       />
 
       <SkillGrid
@@ -59,7 +54,7 @@ const PortfolioPage = () => {
 const STYLES = {
   container: "min-h-screen bg-stone-100 dark:bg-gray-900",
   postsSection: "bg-stone-100 dark:bg-gray-800 py-16",
-  projectsSection: "bg-neutral-200 dark:bg-gray-700 py-16",
+  worksSection: "bg-neutral-200 dark:bg-gray-700 py-16",
   skillsSection: "bg-stone-100 dark:bg-gray-800 py-16",
 } as const;
 
