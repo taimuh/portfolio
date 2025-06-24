@@ -8,25 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { formatDate } from "@/lib/utils";
-import { ReactNode } from "react";
-
-interface CardItem {
-  id?: string | number;
-  title: string;
-  description: string;
-  content?: string;
-  summary?: string;
-  buttonText: string;
-  buttonAction?: () => void;
-  date?: string;
-}
-
-interface CardGridProps {
-  title: string;
-  items: CardItem[];
-  className?: string;
-  id?: string;
-}
+import { CardGridProps } from "@/lib/types";
 
 export function CardGrid({ title, items, className, id }: CardGridProps) {
   const getGridClass = () => {

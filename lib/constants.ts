@@ -24,7 +24,7 @@ export const NAVIGATION = {
 
 export const UI_TEXT = {
   buttons: {
-    viewMyWork: "View My Work",
+    viewMyWork: "View My Works",
     viewPost: "View Post",
     viewWork: "View Work",
     openMenu: "Open menu",
@@ -44,19 +44,13 @@ export const UI_TEXT = {
     postDetails: "Post details go here...",
     workDetails: "Work details go here...",
   },
+  labels: {
+    experience: "経験",
+  },
   footer: {
     allRightsReserved: "All rights reserved.",
   },
 } as const;
-
-export const SKILLS = [
-  "React",
-  "Next.js",
-  "Node.js",
-  "TypeScript",
-  "Java",
-  "Tailwind CSS",
-] as const;
 
 export const THEME_CONFIG = {
   attribute: "class",
