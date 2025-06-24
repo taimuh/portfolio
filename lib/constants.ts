@@ -15,7 +15,7 @@ export const SITE_CONFIG = {
 export const NAVIGATION = {
   items: [
     { href: "#posts", label: "Posts" },
-    { href: "#projects", label: "Projects" },
+    { href: "#works", label: "Works" },
     { href: "#skills", label: "Skills" },
     { href: "#contact", label: "Contact" },
     { href: "https://github.com/taimuh", label: "Source" },
@@ -26,23 +26,23 @@ export const UI_TEXT = {
   buttons: {
     viewMyWork: "View My Work",
     viewPost: "View Post",
-    viewProject: "View Project",
+    viewWork: "View Work",
     openMenu: "Open menu",
     toggleTheme: "Toggle theme",
   },
   sections: {
     posts: "Posts",
-    projects: "Projects",
+    works: "Works",
     skills: "Skills",
     contactInfo: "Contact Information",
   },
   placeholders: {
     postTitle: "Post",
-    projectTitle: "Project",
+    workTitle: "Work",
     shortPostDescription: "Short post description",
-    shortProjectDescription: "Short project description",
+    shortWorkDescription: "Short work description",
     postDetails: "Post details go here...",
-    projectDetails: "Project details go here...",
+    workDetails: "Work details go here...",
   },
   footer: {
     allRightsReserved: "All rights reserved.",
