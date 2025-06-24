@@ -14,7 +14,9 @@ export function Hero() {
           </h1>
           <p className={STYLES.description}>{PERSONAL_INFO.title}</p>
           <div className={STYLES.buttonContainer}>
-            <Button>{UI_TEXT.buttons.viewMyWork}</Button>
+            <Button asChild>
+              <a href="#works">{UI_TEXT.buttons.viewMyWork}</a>
+            </Button>
           </div>
         </div>
       </div>
