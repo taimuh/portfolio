@@ -10,7 +10,7 @@ import {
 import { formatDate } from "@/lib/utils";
 import { CardGridProps } from "@/lib/types";
 
-export function CardGrid({ title, items, className, id }: CardGridProps) {
+export function CardGrid({ title, items, className, id, showContent = true }: CardGridProps & { showContent?: boolean }) {
   const getGridClass = () => {
     const itemCount = items.length;
     if (itemCount === 1) {
@@ -36,9 +36,11 @@ export function CardGrid({ title, items, className, id }: CardGridProps) {
                   <div className={STYLES.date}>{formatDate(item.date)}</div>
                 )}
               </CardHeader>
-              <CardContent>
-                <p>{item.summary || item.content}</p>
-              </CardContent>
+              {showContent && (
+                <CardContent>
+                  <p>{item.summary || item.content}</p>
+                </CardContent>
+              )}
               <CardFooter>
                 <Button onClick={item.buttonAction}>{item.buttonText}</Button>
               </CardFooter>

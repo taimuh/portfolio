@@ -23,6 +23,15 @@ export interface SkillItem extends BaseItem {
   level?: string;
 }
 
+export interface PostItem extends BaseItem {
+  title: string;
+  description: string;
+  content: string;
+  summary: string;
+  buttonText: string;
+  date?: string;
+}
+
 export interface CardItem {
   id?: string | number;
   title: string;
