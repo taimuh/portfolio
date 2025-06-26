@@ -2,11 +2,12 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { extractSummary } from './utils';
-import { WorkItem, SkillItem } from './types';
+import { WorkItem, SkillItem, PostItem } from './types';
 
 
 const worksDirectory = path.join(process.cwd(), 'content/works');
 const skillsDirectory = path.join(process.cwd(), 'content/skills');
+const postsDirectory = path.join(process.cwd(), 'content/posts');
 
 export async function getAllWorks(): Promise<WorkItem[]> {
   try {
@@ -139,6 +140,74 @@ export async function getSkillBySlug(slug: string): Promise<SkillItem | null> {
     } as SkillItem;
   } catch (error) {
     console.error(`Error reading skill ${slug}:`, error);
+    return null;
+  }
+}
+
+export async function getAllPosts(): Promise<PostItem[]> {
+  try {
+    if (!fs.existsSync(postsDirectory)) {
+      return [];
+    }
+
+    const fileNames = fs.readdirSync(postsDirectory);
+    const allPostsData = fileNames
+      .filter(fileName => fileName.endsWith('.md'))
+      .map((fileName) => {
+        const slug = fileName.replace(/\.md$/, '');
+        const fullPath = path.join(postsDirectory, fileName);
+        const fileContents = fs.readFileSync(fullPath, 'utf8');
+        const matterResult = matter(fileContents);
+
+        return {
+          id: slug,
+          slug,
+          title: matterResult.data.title || `Post ${slug}`,
+          description: matterResult.data.description || 'Post description',
+          content: matterResult.content,
+          summary: extractSummary(matterResult.content),
+          buttonText: matterResult.data.buttonText || 'Read Post',
+          date: matterResult.data.date,
+          tags: matterResult.data.tags || [],
+        } as PostItem;
+      });
+
+    return allPostsData.sort((a, b) => {
+      if (a.date && b.date) {
+        return new Date(b.date).getTime() - new Date(a.date).getTime();
+      }
+      return 0;
+    });
+  } catch (error) {
+    console.error('Error reading posts:', error);
+    return [];
+  }
+}
+
+export async function getPostBySlug(slug: string): Promise<PostItem | null> {
+  try {
+    const fullPath = path.join(postsDirectory, `${slug}.md`);
+    
+    if (!fs.existsSync(fullPath)) {
+      return null;
+    }
+
+    const fileContents = fs.readFileSync(fullPath, 'utf8');
+    const matterResult = matter(fileContents);
+
+    return {
+      id: slug,
+      slug,
+      title: matterResult.data.title || `Post ${slug}`,
+      description: matterResult.data.description || 'Post description',
+      content: matterResult.content,
+      summary: extractSummary(matterResult.content),
+      buttonText: matterResult.data.buttonText || 'Read Post',
+      date: matterResult.data.date,
+      tags: matterResult.data.tags || [],
+    } as PostItem;
+  } catch (error) {
+    console.error(`Error reading post ${slug}:`, error);
     return null;
   }
 }

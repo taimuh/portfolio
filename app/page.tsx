@@ -6,17 +6,10 @@ import { SkillGrid } from "@/components/ui/SkillGrid";
 import { Contact } from "@/components/ui/Contact";
 import { Footer } from "@/components/ui/Footer";
 import { UI_TEXT } from "@/lib/constants";
-import { getAllWorks, getAllSkills } from "@/lib/markdown";
+import { getAllWorks, getAllSkills, getAllPosts } from "@/lib/markdown";
 
 const PortfolioPage = async () => {
-  const postsData = [1, 2, 3].map((item) => ({
-    id: item,
-    title: `${UI_TEXT.placeholders.postTitle} ${item}`,
-    description: UI_TEXT.placeholders.shortPostDescription,
-    content: UI_TEXT.placeholders.postDetails,
-    buttonText: UI_TEXT.buttons.viewPost,
-  }));
-
+  const postsData = await getAllPosts();
   const worksData = await getAllWorks();
   const skillsData = await getAllSkills();
 
@@ -30,6 +23,7 @@ const PortfolioPage = async () => {
         title={UI_TEXT.sections.posts}
         items={postsData}
         className={STYLES.postsSection}
+        showContent={false}
       />
 
       <CardGrid
