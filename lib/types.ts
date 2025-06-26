@@ -51,6 +51,7 @@ export interface GridProps {
 
 export interface CardGridProps extends GridProps {
   items: CardItem[];
+  showContent?: boolean;
 }
 
 export interface SkillGridProps extends GridProps {
