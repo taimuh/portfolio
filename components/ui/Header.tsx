@@ -1,15 +1,6 @@
-"use client";
-
-import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Menu } from "lucide-react";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
-import { PERSONAL_INFO, NAVIGATION, UI_TEXT } from "@/lib/constants";
+import { MobileMenu } from "@/components/ui/MobileMenu";
+import { PERSONAL_INFO, NAVIGATION } from "@/lib/constants";
 
 export function Header() {
   return (
@@ -54,31 +45,7 @@ export function Header() {
           </div>
           <div className={STYLES.mobileSection}>
             <ThemeToggle />
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="icon">
-                  <Menu className={STYLES.menuIcon} />
-                  <span className={STYLES.srOnly}>
-                    {UI_TEXT.buttons.openMenu}
-                  </span>
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end">
-                {NAVIGATION.items.map((item) => (
-                  <DropdownMenuItem key={item.href}>
-                    <a
-                      href={item.href}
-                      {...(item.label === "Source" && {
-                        target: "_blank",
-                        rel: "noopener noreferrer",
-                      })}
-                    >
-                      {item.label}
-                    </a>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
+            <MobileMenu />
           </div>
         </div>
       </nav>
@@ -87,12 +54,12 @@ export function Header() {
 }
 
 const STYLES = {
-  header: "bg-stone-100 dark:bg-gray-800 shadow-sm",
+  header: "bg-[#fffcf9] dark:bg-gray-800 shadow-sm",
   nav: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
   container: "flex justify-between h-16",
   leftSection: "flex",
   logoContainer: "flex-shrink-0 flex items-center",
-  logo: "text-2xl font-bold text-indigo-600 dark:text-indigo-400",
+  logo: "text-2xl font-bold text-[#1b3fc6] dark:text-[#204bec]",
   desktopNavigation: "hidden sm:ml-6 sm:flex sm:space-x-8",
   navLink:
     "border-transparent text-gray-500 dark:text-gray-300 hover:border-gray-300 dark:hover:border-gray-600 hover:text-gray-700 dark:hover:text-gray-100 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium",

@@ -16,7 +16,6 @@ export const NAVIGATION = {
   items: [
     { href: "#posts", label: "Posts" },
     { href: "#works", label: "Works" },
-    { href: "#skills", label: "Skills" },
     { href: "#contact", label: "Contact" },
     { href: "https://github.com/taimuh", label: "Source" },
   ],
@@ -33,7 +32,6 @@ export const UI_TEXT = {
   sections: {
     posts: "Posts",
     works: "Works",
-    skills: "Skills",
     contactInfo: "Contact Information",
   },
   placeholders: {
@@ -43,9 +41,6 @@ export const UI_TEXT = {
     shortWorkDescription: "Short work description",
     postDetails: "Post details go here...",
     workDetails: "Work details go here...",
-  },
-  labels: {
-    experience: "経験",
   },
   footer: {
     allRightsReserved: "All rights reserved.",

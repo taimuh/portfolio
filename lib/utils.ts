@@ -7,11 +7,20 @@ export function cn(...inputs: ClassValue[]) {
 
 export function formatDate(dateString: string): string {
   try {
+    // ISO 8601形式の日付文字列を解析（タイムゾーン情報を保持）
     const date = new Date(dateString);
+
+    // 無効な日付の場合は元の文字列を返す
+    if (isNaN(date.getTime())) {
+      return dateString;
+    }
+
+    // 日本時間で統一してフォーマット
     return date.toLocaleDateString('ja-JP', {
       year: 'numeric',
       month: 'long',
-      day: 'numeric'
+      day: 'numeric',
+      timeZone: 'Asia/Tokyo'
     });
   } catch (error) {
     return dateString; // Return original string if parsing fails
