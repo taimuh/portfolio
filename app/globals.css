@@ -34,7 +34,7 @@
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
+    --card: 203 69% 5%;
     --card-foreground: 210 40% 98%;
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
@@ -62,20 +62,13 @@
 @layer base {
   * {
     @apply border-border;
-    transition:
-      background-color 0.5s ease-in-out,
-      color 0.5s ease-in-out,
-      border-color 0.5s ease-in-out,
-      fill 0.5s ease-in-out,
-      stroke 0.5s ease-in-out;
+    transition: background-color 0.5s ease-in-out, color 0.01s ease-in-out;
   }
   html {
     scroll-behavior: smooth;
   }
   body {
     @apply bg-background text-foreground;
-    transition:
-      background-color 0.5s ease-in-out,
-      color 0.5s ease-in-out;
+    transition: background-color 0.5s ease-in-out;
   }
 }

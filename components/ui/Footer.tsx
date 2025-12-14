@@ -21,7 +21,7 @@ export function Footer() {
 }
 
 const STYLES = {
-  footer: "bg-[#fffcf9] dark:bg-gray-800 items-center",
+  footer: "bg-[#fffcf9] dark:bg-[#040F16] items-center",
   container: "max-w-7xl mx-auto py-12 px-4 sm:px-6 md:items-center lg:px-8",
   content: "mt-8 md:mt-0 md:order-1",
   text: "text-center text-base text-gray-400 dark:text-gray-500",

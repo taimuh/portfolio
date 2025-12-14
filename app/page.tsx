@@ -1,6 +1,7 @@
 import React from "react";
 import { Header } from "@/components/ui/Header";
 import { Hero } from "@/components/ui/Hero";
+import { About } from "@/components/ui/About";
 import { CardGrid } from "@/components/ui/CardGrid";
 import { Contact } from "@/components/ui/Contact";
 import { Footer } from "@/components/ui/Footer";
@@ -15,6 +16,14 @@ const PortfolioPage = async () => {
     <div className={STYLES.container}>
       <Header />
       <Hero />
+      <About />
+
+      <CardGrid
+        id="works"
+        title={UI_TEXT.sections.works}
+        items={worksData}
+        className={STYLES.worksSection}
+      />
 
       <CardGrid
         id="posts"
@@ -24,13 +33,6 @@ const PortfolioPage = async () => {
         showContent={false}
       />
 
-      <CardGrid
-        id="works"
-        title={UI_TEXT.sections.works}
-        items={worksData}
-        className={STYLES.worksSection}
-      />
-
       <Contact />
       <Footer />
     </div>
@@ -38,9 +40,9 @@ const PortfolioPage = async () => {
 };
 
 const STYLES = {
-  container: "min-h-screen bg-[#fffcf9] dark:bg-gray-900",
-  postsSection: "bg-[#fffcf9] dark:bg-gray-800 py-16",
-  worksSection: "bg-[#fffcf9] dark:bg-gray-700 py-16",
+  container: "min-h-screen bg-[#fffcf9] dark:bg-[#040F16]",
+  postsSection: "bg-[#fffcf9] dark:bg-[#040F16] py-16",
+  worksSection: "bg-[#fffcf9] dark:bg-[#040F16]",
 } as const;
 
 export default PortfolioPage;

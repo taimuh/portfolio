@@ -54,7 +54,7 @@ export function Header() {
 }
 
 const STYLES = {
-  header: "bg-[#fffcf9] dark:bg-gray-800 shadow-sm",
+  header: "bg-[#fffcf9] dark:bg-[#040F16] shadow-sm",
   nav: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
   container: "flex justify-between h-16",
   leftSection: "flex",
@@ -62,7 +62,7 @@ const STYLES = {
   logo: "text-2xl font-bold text-[#1b3fc6] dark:text-[#204bec]",
   desktopNavigation: "hidden sm:ml-6 sm:flex sm:space-x-8",
   navLink:
-    "border-transparent text-gray-500 dark:text-gray-300 hover:border-gray-300 dark:hover:border-gray-600 hover:text-gray-700 dark:hover:text-gray-100 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium",
+    "border-transparent text-gray-900 dark:text-gray-300 hover:border-gray-300 dark:hover:border-gray-600 hover:text-gray-700 dark:hover:text-gray-100 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium",
   githubIcon: "h-5 w-5 mr-1",
   desktopThemeToggle:
     "hidden sm:ml-6 sm:flex sm:space-x-8 flex items-center text-gray-500 dark:text-gray-300 hover:border-gray-300 dark:hover:border-gray-600 hover:text-gray-700 dark:hover:text-gray-100 mr-4",
