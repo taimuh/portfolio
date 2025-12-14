@@ -5,6 +5,8 @@ export const PERSONAL_INFO = {
     "Software developer specializing in React/TypeScript, Node.js and Java",
   tagline: "I build amazing web experiences",
   xHandle: "@taimoon_dev",
+  about:
+    "I am a software developer with expertise in modern web technologies. I specialize in building scalable and performant applications using React, TypeScript, Node.js, and Java. With a passion for clean code and user-centered design, I strive to create solutions that are both technically robust and delightful to use.",
 } as const;
 
 export const SITE_CONFIG = {
@@ -14,9 +16,9 @@ export const SITE_CONFIG = {
 
 export const NAVIGATION = {
   items: [
+    { href: "#about", label: "About" },
     { href: "#posts", label: "Posts" },
     { href: "#works", label: "Works" },
-    { href: "#skills", label: "Skills" },
     { href: "#contact", label: "Contact" },
     { href: "https://github.com/taimuh", label: "Source" },
   ],
@@ -31,9 +33,9 @@ export const UI_TEXT = {
     toggleTheme: "Toggle theme",
   },
   sections: {
+    about: "About",
     posts: "Posts",
     works: "Works",
-    skills: "Skills",
     contactInfo: "Contact Information",
   },
   placeholders: {
@@ -43,9 +45,6 @@ export const UI_TEXT = {
     shortWorkDescription: "Short work description",
     postDetails: "Post details go here...",
     workDetails: "Work details go here...",
-  },
-  labels: {
-    experience: "経験",
   },
   footer: {
     allRightsReserved: "All rights reserved.",

@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { PERSONAL_INFO, UI_TEXT } from "@/lib/constants";
 
@@ -14,9 +16,9 @@ export function Hero() {
           </h1>
           <p className={STYLES.description}>{PERSONAL_INFO.title}</p>
           <div className={STYLES.buttonContainer}>
-            <Button asChild>
+            {/* <Button asChild>
               <a href="#works">{UI_TEXT.buttons.viewMyWork}</a>
-            </Button>
+            </Button> */}
           </div>
         </div>
       </div>
@@ -25,13 +27,13 @@ export function Hero() {
 }
 
 const STYLES = {
-  section: "bg-neutral-200 dark:bg-gray-700",
-  container: "max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8",
+  section: "bg-[#fffcf9] dark:bg-[#040F16]",
+  container: "max-w-7xl mx-auto py-8 px-4 sm:py-8 sm:px-6 lg:px-8",
   content: "text-center",
   title:
     "text-4xl font-extrabold tracking-tight text-gray-900 dark:text-stone-100 sm:text-5xl md:text-6xl",
   greeting: "block",
-  tagline: "block text-indigo-600 dark:text-indigo-400",
+  tagline: "block text-[#1b3fc6] dark:text-[#204bec]",
   description:
     "mt-3 max-w-md mx-auto text-base text-gray-500 dark:text-gray-300 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl",
   buttonContainer: "mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8",

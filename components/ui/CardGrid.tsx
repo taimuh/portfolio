@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -10,7 +12,13 @@ import {
 import { formatDate } from "@/lib/utils";
 import { CardGridProps } from "@/lib/types";
 
-export function CardGrid({ title, items, className, id, showContent = true }: CardGridProps) {
+export function CardGrid({
+  title,
+  items,
+  className,
+  id,
+  showContent = true,
+}: CardGridProps) {
   const getGridClass = () => {
     const itemCount = items.length;
     if (itemCount === 1) {

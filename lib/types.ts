@@ -15,14 +15,6 @@ export interface WorkItem extends BaseItem {
   date?: string;
 }
 
-export interface SkillItem extends BaseItem {
-  name: string;
-  description: string;
-  content: string;
-  experience?: string;
-  level?: string;
-}
-
 export interface PostItem extends BaseItem {
   title: string;
   description: string;
@@ -52,8 +44,4 @@ export interface GridProps {
 export interface CardGridProps extends GridProps {
   items: CardItem[];
   showContent?: boolean;
-}
-
-export interface SkillGridProps extends GridProps {
-  skills: readonly SkillItem[];
 }
