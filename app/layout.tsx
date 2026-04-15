@@ -4,7 +4,11 @@ import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import { SITE_CONFIG } from "@/lib/constants";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-heading",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: SITE_CONFIG.title,
@@ -18,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={`${inter.variable} font-body`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
