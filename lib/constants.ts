@@ -19,6 +19,7 @@ export const NAVIGATION = {
     { href: "#about", label: "About" },
     { href: "#posts", label: "Posts" },
     { href: "#works", label: "Works" },
+    { href: "/lab", label: "Lab" },
     { href: "#contact", label: "Contact" },
     { href: "https://github.com/taimuh", label: "Source" },
   ],
@@ -36,6 +37,7 @@ export const UI_TEXT = {
     about: "About",
     posts: "Posts",
     works: "Works",
+    lab: "Lab",
     contactInfo: "Contact Information",
   },
   placeholders: {

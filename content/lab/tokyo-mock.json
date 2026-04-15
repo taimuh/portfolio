@@ -1,0 +1,76 @@
+{
+  "season": "春",
+  "lastUpdated": "2026-04-16",
+  "spots": [
+    {
+      "name": "上野恩賜公園",
+      "description": "桜の名所として有名な都内最大級の公園。春は約1000本のソメイヨシノが咲き誇り、花見客で賑わう。",
+      "area": "台東区",
+      "tags": ["公園", "桜", "花見"],
+      "imageQuery": "ueno park cherry blossom tokyo spring"
+    },
+    {
+      "name": "千鳥ヶ淵緑道",
+      "description": "皇居のお堀沿いに広がる桜の名所。ボートからの花見が楽しめ、ライトアップも人気。",
+      "area": "千代田区",
+      "tags": ["桜", "ボート", "ライトアップ"],
+      "imageQuery": "chidorigafuchi moat cherry blossom boat tokyo"
+    },
+    {
+      "name": "浅草・仲見世通り",
+      "description": "雷門から浅草寺へと続く約250mの参道。春は観光客が多く、和の雰囲気を楽しめる。",
+      "area": "台東区",
+      "tags": ["観光", "寺院", "グルメ"],
+      "imageQuery": "asakusa sensoji temple nakamise tokyo japan"
+    }
+  ],
+  "gourmet": [
+    {
+      "name": "桜えびのかき揚げ丼",
+      "description": "春が旬の桜えびを使ったかき揚げ丼。サクサクの食感と甘みが絶品。",
+      "area": "築地・日本橋",
+      "tags": ["和食", "旬", "どんぶり"],
+      "imageQuery": "japanese tempura rice bowl donburi food"
+    },
+    {
+      "name": "いちごスイーツ",
+      "description": "春のいちごを使ったパフェやショートケーキが各所で登場。フルーツパーラーや老舗洋菓子店が人気。",
+      "area": "新宿・銀座",
+      "tags": ["スイーツ", "いちご", "カフェ"],
+      "imageQuery": "japanese strawberry parfait dessert cafe"
+    },
+    {
+      "name": "山菜天ぷら",
+      "description": "春の山菜（タラの芽・こごみ・ふきのとう）を使った天ぷらが旬。老舗の天ぷら屋で楽しめる。",
+      "area": "神田・日本橋",
+      "tags": ["和食", "天ぷら", "旬"],
+      "imageQuery": "japanese tempura vegetables tokyo restaurant"
+    }
+  ],
+  "events": [
+    {
+      "name": "上野公園 桜まつり",
+      "description": "上野公園一帯で開催される東京最大級のお花見イベント。屋台や出店が並び、昼夜楽しめる。",
+      "area": "台東区・上野",
+      "tags": ["桜", "祭り", "屋台"],
+      "date": "3月下旬〜4月上旬",
+      "imageQuery": "hanami cherry blossom festival tokyo lantern night"
+    },
+    {
+      "name": "東京ミッドタウン ガーデンパーティー",
+      "description": "六本木の東京ミッドタウンで開催される春の庭園イベント。アート展示や音楽ライブも同時開催。",
+      "area": "港区・六本木",
+      "tags": ["アート", "音楽", "庭園"],
+      "date": "4月〜5月",
+      "imageQuery": "tokyo midtown roppongi garden spring event night"
+    },
+    {
+      "name": "神田祭（外神田・神田明神）",
+      "description": "江戸三大祭のひとつ。隔年開催の本祭では神輿が秋葉原・神田周辺を練り歩く。",
+      "area": "千代田区・神田",
+      "tags": ["祭り", "神輿", "伝統"],
+      "date": "5月中旬",
+      "imageQuery": "kanda matsuri mikoshi festival tokyo traditional"
+    }
+  ]
+}

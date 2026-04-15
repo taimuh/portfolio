@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -50,7 +51,13 @@ export function CardGrid({
                 </CardContent>
               )}
               <CardFooter>
-                <Button onClick={item.buttonAction}>{item.buttonText}</Button>
+                {item.link ? (
+                  <Link href={item.link}>
+                    <Button>{item.buttonText}</Button>
+                  </Link>
+                ) : (
+                  <Button onClick={item.buttonAction}>{item.buttonText}</Button>
+                )}
               </CardFooter>
             </Card>
           ))}
