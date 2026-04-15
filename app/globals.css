@@ -68,7 +68,10 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-body;
     transition: background-color 0.5s ease-in-out;
+  }
+  h1, h2, h3, h4 {
+    @apply font-heading;
   }
 }
