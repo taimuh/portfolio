@@ -1,7 +1,3 @@
-import fs from "fs";
-import path from "path";
-import Anthropic from "@anthropic-ai/sdk";
-
 export interface RecommendationItem {
   name: string;
   description: string;
@@ -98,25 +94,10 @@ function parseRecommendationsJson(text: string): TokyoRecommendations {
   return JSON.parse(jsonMatch[0]) as TokyoRecommendations;
 }
 
-async function generateWithClaude(prompt: string): Promise<string> {
-  const client = new Anthropic();
-  const message = await client.messages.create({
-    model: "claude-sonnet-4-6",
-    max_tokens: 2048,
-    messages: [{ role: "user", content: prompt }],
-  });
-  const content = message.content[0];
-  if (content.type !== "text") {
-    throw new Error("Unexpected response type from Claude API");
-  }
-  return content.text;
-}
-
-async function generateWithCopilot(prompt: string): Promise<string> {
+async function generateWithGitHubModels(prompt: string): Promise<string> {
   const token = process.env.GITHUB_TOKEN;
   if (!token) throw new Error("GITHUB_TOKEN is not set");
 
-  // GitHub Models API (github.com/marketplace/models)
   const response = await fetch(
     "https://models.inference.ai.azure.com/chat/completions",
     {
@@ -143,12 +124,6 @@ async function generateWithCopilot(prompt: string): Promise<string> {
 }
 
 export async function fetchTokyoRecommendations(): Promise<TokyoRecommendations> {
-  if (process.env.NODE_ENV === "development") {
-    const mockPath = path.join(process.cwd(), "content/lab/tokyo-mock.json");
-    const mockData = fs.readFileSync(mockPath, "utf8");
-    return JSON.parse(mockData) as TokyoRecommendations;
-  }
-
   const now = new Date();
   const month = now.getMonth() + 1;
   const season = getSeason(month);
@@ -161,14 +136,7 @@ export async function fetchTokyoRecommendations(): Promise<TokyoRecommendations>
   ]);
 
   const prompt = buildPrompt(dateStr, season, spotsRaw, gourmetRaw, eventsRaw);
-
-  let rawText: string;
-  try {
-    rawText = await generateWithClaude(prompt);
-  } catch (e) {
-    console.warn("Claude API failed, falling back to GitHub Copilot:", e);
-    rawText = await generateWithCopilot(prompt);
-  }
+  const rawText = await generateWithGitHubModels(prompt);
 
   return parseRecommendationsJson(rawText);
 }
