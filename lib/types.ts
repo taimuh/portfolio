@@ -13,6 +13,7 @@ export interface WorkItem extends BaseItem {
   summary: string;
   buttonText: string;
   date?: string;
+  link?: string;
 }
 
 export interface PostItem extends BaseItem {
@@ -24,6 +25,16 @@ export interface PostItem extends BaseItem {
   date?: string;
 }
 
+export interface LabItem extends BaseItem {
+  title: string;
+  description: string;
+  content: string;
+  summary: string;
+  buttonText: string;
+  date?: string;
+  link?: string;
+}
+
 export interface CardItem {
   id?: string | number;
   title: string;
@@ -33,6 +44,7 @@ export interface CardItem {
   buttonText: string;
   buttonAction?: () => void;
   date?: string;
+  link?: string;
 }
 
 export interface GridProps {
