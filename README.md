@@ -62,6 +62,20 @@ yarn lint
 
 `content/` ディレクトリにMarkdownファイルを追加するだけで自動的にサイトに反映されます。
 
+**Posts** (`content/posts/*.md`):
+
+```markdown
+---
+title: 記事タイトル
+description: 概要
+date: YYYY-MM-DD
+tags: [tag1, tag2]
+buttonText: 記事を読む
+---
+
+本文...
+```
+
 **Works** (`content/works/*.md`):
 
 ```markdown

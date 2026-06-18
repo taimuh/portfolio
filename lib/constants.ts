@@ -3,7 +3,7 @@ export const PERSONAL_INFO = {
   greeting: "Hi, I'm",
   title:
     "Software developer specializing in React/TypeScript, Node.js and Java",
-  tagline: "I build amazing web experiences",
+  tagline: "Turning ideas into reality, one line at a time",
   xHandle: "@taimoon_dev",
   about:
     "I am a software developer with expertise in modern web technologies. I specialize in building scalable and performant applications using React, TypeScript, Node.js, and Java. With a passion for clean code and user-centered design, I strive to create solutions that are both technically robust and delightful to use.",
